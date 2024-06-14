@@ -5,7 +5,7 @@
 // Input: [5,4,-1,7,8]                ----->>>>>    Output: 23,  [5,4,-1,7,8]
 
 // [-2,1,-3,4,-1,2,1,-5,4] i=3,j=4
-// maxSum = 4
+// maxSum = 4 
 // currentSum = 3
 
 // Solution1: Brute Force
@@ -27,7 +27,7 @@ function maximumSubArraySum(arr){
     }
     return {sum:maxSum,subArray:arr.slice(startIndex,endIndex+1)};
 }
-
+ 
 // Solution2: Kadane's Algorithm
 // [5,4,-1,7,8] i=4
 // sum=23;
@@ -42,13 +42,13 @@ function maximumSubArraySumOptimised(arr){
     let sum = 0;
     for(const element of arr){
         sum += element;
-        if(sum > maxSum){
+        if(sum > maxSum){  
             maxSum = sum;
         }
         if(sum < 0){
             sum = 0;
         }
-    }
+    }  
 
     return maxSum;
 }

@@ -32,10 +32,10 @@ const input = [1,3,5,2,2];
 // brute for approach
 // Time complexity: O(n^2)
 // Space complexity: O(1)
-function equilibriumIndexBruteForce(arr){
+function equilibriumIndexBruteForce(arr)  {
     const arrLen = arr.length;
     // iterate over the array
-    for(let i=0;i < arrLen;i++){
+    for(let i=0;i < arrLen;i++){ 
         // calculate the sum of left index elements
         let leftSum = 0;
         for(let j=0;j < i;j++){
